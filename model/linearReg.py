@@ -1,6 +1,5 @@
-from unittest import TestSuite
 import numpy as np
-from sklearn.model_selection import train_test_split, KFold
+from sklearn.model_selection import KFold
 from sklearn.metrics import accuracy_score
 
 def normalEq(x, y):
@@ -21,7 +20,7 @@ def normalEq(x, y):
     #print(theta.shape)
     return theta
 acc_scores = []
-data_multi = np.loadtxt('tictac_multi.txt')
+data_multi = np.loadtxt('p1\\Data\\tictac_multi.txt')
 X = data_multi[:,:9]
 Y = data_multi[:,9:]
 kFold = KFold(n_splits = 10, shuffle=True)
