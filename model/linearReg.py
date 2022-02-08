@@ -6,7 +6,6 @@ def normalEq(x, y):
     b = np.ones((x.shape[0], 1))
     #print(b.shape)
     x_new = []
-    
     for i in range(0,x.shape[1]):
         temp = np.reshape(x[:,i], (x.shape[0], 1))
         #print(temp.shape)
@@ -39,7 +38,7 @@ for train_index, test_index in kFold.split(X) :
         y_predict[i, mi] = 1
     y_predict = np.round(y_predict)
     acc = accuracy_score(y_test, y_predict)
-    print(acc)
+    #print(acc)
     acc_scores.append(acc)
 print(acc_scores)
 print(np.mean(acc_scores))
