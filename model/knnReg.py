@@ -3,7 +3,7 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.model_selection import KFold, train_test_split, cross_val_score
 from sklearn.metrics import accuracy_score
 
-data_multi = np.loadtxt('p1\\Data\\tictac_multi.txt')
+data_multi = np.loadtxt('Data\\tictac_multi.txt')
 #print(data_multi)
 #print(np.shape(data_multi))
 #print('\n')
