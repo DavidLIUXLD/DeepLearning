@@ -73,7 +73,7 @@ for ds_cnt, ds in enumerate(datasets):
     y_pred = final_classifier.predict(X_test)
     score = final_classifier.score(X_test, y_test)
     print(f'The score for the test set is {score*100}%')
-    conf_matrix += [confusion_matrix(y_test, y_pred)]
+    conf_matrix += [confusion_matrix(y_test, y_pred, normalize='true')]
 
 
 # In[17]:
