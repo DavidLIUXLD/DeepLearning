@@ -19,7 +19,10 @@ for train_index, val_index in kFold.split(X_train):
     accu = accuracy_score(np.argmax(y_val, axis=1),np.argmax(y_val_predict, axis=1))
     acc = mlpReg.score(x_val, y_val)
     acc_scores.append(acc)
-print(np.mean(acc_scores))
+print("mlp regressor accuracy: ", np.mean(acc_scores))
+y_predict = mlpReg.predict(X_test);
+fa = accuracy_score(np.argmax(Y_test, axis=1),np.argmax(y_predict, axis=1))
+print("final accuracy: ", fa)
 
 dump(mlpReg, 'mlpRegModel.joblib')
 
