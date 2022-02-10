@@ -43,7 +43,6 @@ while not gameOver:
     userInput = input("Please enter an integer from 0-8 for position.")
     try:
       userInt = int(userInput) #convert to int, if fails due to ValueError, tell user not an int
-      print(userInt)
       if userInt >= 0 and userInt <= 8: #check if int is valid for tic tac toe
         if gameArray[0][userInt] == 0: #check if spot is taken
           break #move on if all checks are passed
