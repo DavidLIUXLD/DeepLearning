@@ -68,7 +68,7 @@ while not gameOver:
     break
   
   #get network prediction and convert it to int
-  networkInput = chosenNetwork.predict(gameArray)
+  networkInput = network.predict(gameArray)
   networkInt = int(networkInput)
   print('Network move: ' + str(networkInt))
 
